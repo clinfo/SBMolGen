@@ -7,12 +7,14 @@ SBMolGen is modify based [ChemTS](https://github.com/tsudalab/ChemTS).
 ## Requirements
 1. [Python](https://www.anaconda.com/download/)>=2.7 
 2. [Keras](https://github.com/fchollet/keras) (version 2.0.5) If you installed the newest version of keras, some errors will show up. Please change it back to keras 2.0.5 by pip install keras==2.0.5. 
-3. [rdkit](https://anaconda.org/rdkit/rdkit)
-4. [rDock](http://rdock.sourceforge.net/installation/)
+3. tensoflow (version 1.15.2, ver>=2.0 occurred error.) 
+4. [rdkit](https://anaconda.org/rdkit/rdkit)
+5. [rDock](http://rdock.sourceforge.net/installation/)
 
 ## How to use
 
 1. Get SBMleGen.
+
 ```
 git clone https://github.com/clinfo/SBMolGen.git
 cd SBMolGen
@@ -26,11 +28,13 @@ export LD_LIBRARY_PATH=${RBT_ROOT}/lib:${LD_LIBRARY_PATH}
 ``` 
 
 2. Train the RNN model.
+
 ```
 cd train_RNN
 python train_RNN.py train_RNN.yaml
 ```
 3. Make a setting file for molecule generate.
+
 A sample of setting file.
 
 setting.yaml
@@ -52,9 +56,11 @@ hashimoto_filter: True
 model_name: model
 ```
 4. Prepare the target file.
+
 Refer to the [rDock Tutorials](http://rdock.sourceforge.net/docking-in-3-steps/) for instructions on preparing the required files for docking.
 
 5. Molecule generate.
+
 ```
 cd example_ligand_design
 python ${SBMolGen_PATH}/sbmolgen.py setting.yaml
