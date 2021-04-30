@@ -17,21 +17,48 @@ SBMolGen is modify based [ChemTS](https://github.com/tsudalab/ChemTS).
 git clone https://github.com/clinfo/SBMolGen.git
 cd SBMolGen
 ```
+Set the system path, here is the example for bash.
+```
+export SBMolGen_PATH=/Path to SBMolGen/SBMolGen
+export PATH=${SBMolGen_PATH}:${PATH}
+export RBT_ROOT=/Path to rDock 
+export LD_LIBRARY_PATH=${RBT_ROOT}/lib:${LD_LIBRARY_PATH}
+``` 
+
 2. Train the RNN model.
 ```
 cd train_RNN
-python train_RNN.py
+python train_RNN.py train_RNN.yaml
 ```
-3. Make a setting file for molecule desgin.
-a sample of setting file, setting.yaml.
+3. Make a setting file for molecule generate.
+A sample of setting file.
 
+setting.yaml
 ```
-
+c_val: 1.0
+loop_num_nodeExpansion: 1000
+target: 'CDK2'
+target_path: /home/apps/SBMolGen/example_ligand_design
+hours: 1
+score_target: 'SCORE.INTER'
+docking_num: 10
+base_rdock_score: -20
+sa_threshold: 3.5
+# rule5 1: weigth < 500 logp <5 donor < 5 acceptor < 10, 2: weigth < 300 logp <3 donor < 3 acceptor < 3 rotbonds <3
+rule5: 1
+radical_check: True
+simulation_num: 3
+hashimoto_filter: True
+model_name: model
 ```
 4. Prepare the target file.
 Refer to the [rDock Tutorials](http://rdock.sourceforge.net/docking-in-3-steps/) for instructions on preparing the required files for docking.
-5. Molecule generation.
+
+5. Molecule generate.
 ```
-python main.py setting.yaml
+cd example_ligand_design
+python ${SBMolGen_PATH}/sbmolgen.py setting.yaml
 ```
 
+## License
+This package is distributed under the MIT License.
