@@ -67,7 +67,7 @@ def rdock_score(compound, score_type, target_dir, docking_num = 10):
             for i in range(num_cpus):
                 #cmd = '/home/terayama/rdock/fiexed_side_chain/build/exe/rbdock -r cavity.prm -p /home/terayama/rdock/fiexed_side_chain/data/scripts/dock.prm -i ' + sdf_file + ' -o ' + docking_result_file + str(i) + ' -T 0 -s '+str(i)+' -n 1'
                 #cmd = 'rbdock -r cavity.prm -p /home/mki/SideEffectPrediction/08_rDock/prm/dock.prm -i ' + sdf_file + ' -o ' + docking_result_file + str(i) + ' -T 0 -s '+str(i)+' -n 1' 
-                cmd = RBT_ROOT + '/bin/rbdock -r '+ target_dir + '/cavity.prm -p '+ RBT_ROOT + '/data/scripts/dock.prm -i ' + sdf_file + ' -o ' + docking_result_file + str(i) + ' -T 0 -s '+str(i)+' -n 1' 
+                cmd = RBT_ROOT + '/bin/rbdock -allH -r '+ target_dir + '/cavity.prm -p '+ RBT_ROOT + '/data/scripts/dock.prm -i ' + sdf_file + ' -o ' + docking_result_file + str(i) + ' -T 0 -s '+str(i)+' -n 1' 
                 print('cmd', cmd)
                 #t = threading.Thread(target=docking_calculation, args=(cmd,))
                 #threads.append(t)

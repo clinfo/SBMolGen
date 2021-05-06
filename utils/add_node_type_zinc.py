@@ -290,7 +290,7 @@ def check_node_type(new_compound, score_type, generated_dict, sa_threshold = 10,
                     docking_result_file = 'rdock_out_'
                     compound_id = i
                     # creat the directory for best docking pose.
-                    out_dir = 'out_trial'+ str(trial)
+                    out_dir = 'mol_3D_pose_trial'+ str(trial)
                     if not os.path.isdir(out_dir):
                         os.mkdir(out_dir)  
                     f_list.write('pose_'+str(dict_id)+'_'+str(compound_id)+'_'+str(best_docking_id)+','+new_compound[i])
