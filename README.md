@@ -8,7 +8,7 @@ SBMolGen uses and modifies some [ChemTS](https://github.com/tsudalab/ChemTS) fea
 For more information on ChemTS, please see the [paper of ChemTS](https://doi.org/10.1080/14686996.2017.1401424).
 
 ## Requirements
-1. [Python](https://www.anaconda.com/download/)>=2.7 
+1. [Python](https://www.anaconda.com/download/)>=3.7
 2. [Keras](https://github.com/fchollet/keras) (version 2.0.5) If you installed the newest version of keras, some errors will show up. Please change it back to keras 2.0.5 by pip install keras==2.0.5. 
 3. tensoflow (version 1.15.2, ver>=2.0 occurred error.) 
 4. [rdkit](https://anaconda.org/rdkit/rdkit)
