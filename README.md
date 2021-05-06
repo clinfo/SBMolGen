@@ -3,9 +3,7 @@ Supporting Information for the paper _"[Structure-based de novo molecular genera
 
 In this study, we developed a new deep learning-based molecular generator, SBMolGen, that integrates a recurrent neural network, a Monte Carlo tree search, and docking simulations. The results of an evaluation using four target proteins (two kinases and two G protein-coupled receptors) showed that the generated molecules had a better binding affinity score (docking score) than the known active compounds, and they possessed a broader chemical space distribution. SBMolGen not only generates novel binding active molecules but also presents 3D docking poses with target proteins, which will be useful in subsequent drug design.
 
-SBMolGen uses and modifies some [ChemTS](https://github.com/tsudalab/ChemTS) features.
-
-For more information on ChemTS, please see the [paper of ChemTS](https://doi.org/10.1080/14686996.2017.1401424).
+SBMolGen uses and modifies some [ChemTS](https://github.com/tsudalab/ChemTS) features. For more information on ChemTS, please see the [paper of ChemTS](https://doi.org/10.1080/14686996.2017.1401424).
 
 ## Requirements
 1. [Python](https://www.anaconda.com/download/)>=3.7
