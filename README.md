@@ -14,7 +14,7 @@ SBMolGen uses and modifies some [ChemTS](https://github.com/tsudalab/ChemTS) fea
 
 ## How to use
 
-1. Get SBMleGen.
+1. Get SBMolGen.
 
 ```
 git clone https://github.com/clinfo/SBMolGen.git
