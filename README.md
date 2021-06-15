@@ -67,5 +67,6 @@ cd example_ligand_design
 python ${SBMolGen_PATH}/sbmolgen.py setting.yaml
 ```
 
+
 ## License
 This package is distributed under the MIT License.
