@@ -1,5 +1,5 @@
 # Structure-based de novo Molecular Generator (SBMolGen)
-Supporting Information for the paper _"[Structure-based de novo molecular generator combined with artificial intelligence and docking simulations](https://doi.org/10.26434/chemrxiv.14371967.v1)"_.
+Supporting Information for the paper _"[Structure-Based de Novo Molecular Generator Combined with Artificial Intelligence and Docking Simulations](https://pubs.acs.org/doi/10.1021/acs.jcim.1c00679)"_.
 
 In this study, we developed a new deep learning-based molecular generator, SBMolGen, that integrates a recurrent neural network, a Monte Carlo tree search, and docking simulations. The results of an evaluation using four target proteins (two kinases and two G protein-coupled receptors) showed that the generated molecules had a better binding affinity score (docking score) than the known active compounds, and they possessed a broader chemical space distribution. SBMolGen not only generates novel binding active molecules but also presents 3D docking poses with target proteins, which will be useful in subsequent drug design.
 
